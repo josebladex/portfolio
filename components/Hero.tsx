@@ -31,10 +31,10 @@ const Hero = () => {
       >
         <Image
           src="/bg/bg-hero.png"
-          alt="bgimg"
-          layout="fill"
-          objectFit="cover"
-          priority
+          
+          fill
+    style={{ objectFit: 'cover' }}
+    alt="Background"
           className="absolute inset-0"
         />
       </div>
