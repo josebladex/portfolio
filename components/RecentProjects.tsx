@@ -3,14 +3,32 @@ import { projects } from "@/data";
 import { Compare } from "./ui/compare";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { useLanguageStore } from "@/store/useLanguageStore";
 const RecentProjects = () => {
+
+  
+  const { language } = useLanguageStore();
+  const projectStore = projects[language];
+
+
   return (
     <div id="projects" className="py-20">
-      <h1 className="heading">
-        Mis <span className="text-sky-300/30">Proyectos Recientes</span>
+        <h1 className="heading">
+        {language === "es"
+          ? "Mis"
+          : language === "en"
+          ? "My"
+          : "My"}{" "}
+        <span className="text-sky-300/30">
+          {language === "es"
+            ? "Proyectos Recientes"
+            : language === "en"
+            ? "Recent Projects"
+            : "Recent Projects"}
+        </span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10 ">
-        {projects.map((item) => (
+        {projectStore.map((item) => (
           <div key={item.id} className="max-w-xs w-full group/card border border-white-100 rounded-tl-3xl rounded-br-3xl ">
             <div
               className={cn(
@@ -52,8 +70,12 @@ const RecentProjects = () => {
                     {item.year}
                   </p>
 
-                  <a href={item.link} target="_blank" className="z-40 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                    Visitar
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    className="z-40 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+                  >
+                    {language === "es" ? "Visitar" : language === "en" ? "Visit" : "Visit"}
                   </a>
                 </div>
               </div>

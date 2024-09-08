@@ -1,27 +1,37 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { EvervaultCard } from "../ui/evervault-card";
+import { useLanguageStore } from "@/store/useLanguageStore";
 
 export function CardStack() {
+  const { language } = useLanguageStore();
+
   return (
     <Card>
       <div className="w-full">
-        <EvervaultCard text="Mi Stack Tecnológico en Evolución" />
-        
+        <EvervaultCard
+          text={
+            language === "es"
+              ? "Mi Stack Tecnológico en Evolución"
+              : language === "en"
+              ? "My Evolving Tech Stack"
+              : "My Evolving Tech Stack" // Valor por defecto si el idioma no está definido
+          }
+        />
       </div>
 
       <CardDescription>
-        Soy estudiante de Ingeniería Mecatrónica con una sólida formación en
-        desarrollo de software. Destaco por mi capacidad para gestionar el
-        tiempo de manera eficiente, mi flexibilidad y habilidades organizativas.
-        Estoy comprometido con la excelencia operativa y el desarrollo continuo,
-        y estoy entusiasmado por aplicar mis conocimientos y habilidades para
-        ofrecer soluciones innovadoras y crecer profesionalmente en el campo del
-        desarrollo de software.
+        {language === "es"
+          ? "Soy estudiante de Ingeniería Mecatrónica con una sólida formación en desarrollo de software. Destaco por mi capacidad para gestionar el tiempo de manera eficiente, mi flexibilidad y habilidades organizativas. Estoy comprometido con la excelencia operativa y el desarrollo continuo, y estoy entusiasmado por aplicar mis conocimientos y habilidades para ofrecer soluciones innovadoras y crecer profesionalmente en el campo del desarrollo de software."
+          : language === "en"
+          ? "I am a Mechatronics Engineering student with a solid background in software development. I stand out for my ability to manage time efficiently, my flexibility, and organizational skills. I am committed to operational excellence and continuous development, and I am excited to apply my knowledge and skills to provide innovative solutions and grow professionally in the field of software development."
+          : "I am a Mechatronics Engineering student with a solid background in software development. I stand out for my ability to manage time efficiently, my flexibility, and organizational skills. I am committed to operational excellence and continuous development, and I am excited to apply my knowledge and skills to provide innovative solutions and grow professionally in the field of software development." // Valor por defecto si el idioma no está definido
+        }
       </CardDescription>
     </Card>
   );
 }
+
 
 export const Card = ({
   className,

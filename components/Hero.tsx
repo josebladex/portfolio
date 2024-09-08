@@ -7,38 +7,9 @@ import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
 import { GrDocumentDownload } from "react-icons/gr";
 import { useRouter } from "next/navigation";
-const words = [
-  {
-    text: "Hola! ",
-  },
-  {
-    text: "Soy",
-  },
-  {
-    text: "José",
-  },
-  {
-    text: "Plata,",
-  },
-  {
-    text: "un",
-  },
-  {
-    text: "desarrollador",
-  },
-  {
-    text: "Full",
-  },
-  {
-    text: "Stack",
-  },
-  {
-    text: "y",
-  },
-  {
-    text: "Mecatrónico.",
-  },
-];
+import { useLanguageStore } from "@/store/useLanguageStore";
+import { HeroData } from "@/data";
+
 const font_3270 = localFont({
   src: "../public/fonts/3270.ttf",
   display: "swap",
@@ -46,6 +17,11 @@ const font_3270 = localFont({
 
 const Hero = () => {
   const router = useRouter();
+
+  const { language } = useLanguageStore();
+  const heroData = HeroData[language][0]; // Accede al primer elemento del array
+  const words = heroData?.words || []; // Asegúrate de que `words` esté definido
+
 
   return (
     <div className="pb-20 pt-36 h-screen">
@@ -109,12 +85,21 @@ const Hero = () => {
     "
       >
         <MagicButton
-          title="Curriculum Vitae"
+         title={
+          language === "es"
+            ? "Curriculum Vitae"
+            : language === "en"
+            ? "Resume Jose Plata"
+            : "Curriculum Vitae" // Valor por defecto si el idioma no está definido
+        }
           icon={<GrDocumentDownload />}
           position="right"
           handleClick={() => {
             window.open(
-              "https://drive.google.com/file/d/1HVcaT_WVPeF5X-VEQxuX3OB2wfXncvzY/view?usp=drive_link",
+              language === "es"
+            ? "https://drive.google.com/file/d/1HVcaT_WVPeF5X-VEQxuX3OB2wfXncvzY/view?usp=drive_link"
+            : "https://drive.google.com/file/d/1j6lr3R-awO9oJ6A_qT3o_IxCANyJmc0b/view?usp=drive_link"
+             ,
               "_blank"
             );
           }}

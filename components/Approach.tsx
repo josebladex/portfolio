@@ -1,23 +1,46 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 import { getYear } from "date-fns";
-
+import { useLanguageStore } from "@/store/useLanguageStore";
 
 const Approach = () => {
+  const { language } = useLanguageStore();
   const currentYear = getYear(new Date());
 
   return (
     <section className="w-full py-20">
       <h1 className="heading">
-        Mi <span className="text-red-500">enfoque</span>
+        {language === "es"
+          ? "Mi"
+          : language === "en"
+          ? "My"
+          : "My"}{" "}
+        <span className="text-red-500">
+          {language === "es"
+            ? "Enfoque"
+            : language === "en"
+            ? "Approach"
+            : "Approach"}
+        </span>
       </h1>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         <Tarjeta
-          titulo="Planificación y Estrategia"
+          titulo={
+            language === "es"
+              ? "Planificación y Estrategia"
+              : language === "en"
+              ? "Planning and Strategy"
+              : "Planning and Strategy"
+          }
           icono={<AceternityIcon orden="Fase 1" />}
-          descripcion="Colaboraremos para definir los objetivos de tu sitio web, el público objetivo, y las funcionalidades clave. Hablaremos de la estructura del sitio, la navegación y los requisitos de contenido."
+          descripcion={
+            language === "es"
+              ? "Colaboraremos para definir los objetivos de tu sitio web, el público objetivo, y las funcionalidades clave. Hablaremos de la estructura del sitio, la navegación y los requisitos de contenido."
+              : language === "en"
+              ? "We will collaborate to define your website’s goals, target audience, and key functionalities. We will discuss the site’s structure, navigation, and content requirements."
+              : "We will collaborate to define your website’s goals, target audience, and key functionalities. We will discuss the site’s structure, navigation, and content requirements."
+          }
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -25,9 +48,21 @@ const Approach = () => {
           />
         </Tarjeta>
         <Tarjeta
-          titulo="Desarrollo y Actualización del Progreso"
+          titulo={
+            language === "es"
+              ? "Desarrollo y Actualización del Progreso"
+              : language === "en"
+              ? "Development and Progress Updates"
+              : "Development and Progress Updates"
+          }
           icono={<AceternityIcon orden="Fase 2" />}
-          descripcion="Una vez que estemos de acuerdo con el plan, pongo mi playlist y me sumerjo en el código. Desde los bocetos iniciales hasta el código final, te mantendré informado en cada paso del proceso."
+          descripcion={
+            language === "es"
+              ? "Una vez que estemos de acuerdo con el plan, pongo mi playlist y me sumerjo en el código. Desde los bocetos iniciales hasta el código final, te mantendré informado en cada paso del proceso."
+              : language === "en"
+              ? "Once we agree on the plan, I put on my playlist and dive into the code. From initial sketches to the final code, I’ll keep you informed at every step of the process."
+              : "Once we agree on the plan, I put on my playlist and dive into the code. From initial sketches to the final code, I’ll keep you informed at every step of the process."
+          }
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -40,9 +75,21 @@ const Approach = () => {
           />
         </Tarjeta>
         <Tarjeta
-          titulo="Desarrollo y Lanzamiento"
+          titulo={
+            language === "es"
+              ? "Desarrollo y Lanzamiento"
+              : language === "en"
+              ? "Development and Launch"
+              : "Development and Launch"
+          }
           icono={<AceternityIcon orden="Fase 3" />}
-          descripcion="¡Aquí es donde ocurre la magia! Basándome en el diseño aprobado, traduciré todo en código funcional, construyendo tu sitio web desde cero."
+          descripcion={
+            language === "es"
+              ? "¡Aquí es donde ocurre la magia! Basándome en el diseño aprobado, traduciré todo en código funcional, construyendo tu sitio web desde cero."
+              : language === "en"
+              ? "This is where the magic happens! Based on the approved design, I will translate everything into functional code, building your website from scratch."
+              : "This is where the magic happens! Based on the approved design, I will translate everything into functional code, building your website from scratch."
+          }
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -52,13 +99,14 @@ const Approach = () => {
         </Tarjeta>
       </div>
       <div className="w-full h-fit flex items-center justify-center">
-
-      <p className="md:text-base text-sm md:font-semibold font-bold text-red-700">
-          Diseñado y Desplegado por Jose Plata, Copyright © {currentYear} 
+        <p className="md:text-base text-sm md:font-semibold font-bold text-red-700">
+          {language === "es"
+            ? `Diseñado y Desplegado por José Plata, Copyright © ${currentYear}`
+            : language === "en"
+            ? `Designed and Deployed by José Plata, Copyright © ${currentYear}`
+            : `Designed and Deployed by José Plata, Copyright © ${currentYear}`}
         </p>
-
       </div>
-     
     </section>
   );
 };
