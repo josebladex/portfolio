@@ -109,7 +109,7 @@ importers:
         specifier: ^10.0.1
         version: 10.4.20(postcss@8.4.41)
       eslint:
-        specifier: ^8
+        specifier: ^8.57.0
         version: 8.57.0
       eslint-config-next:
         specifier: 14.1.4
