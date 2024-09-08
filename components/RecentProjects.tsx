@@ -11,7 +11,7 @@ const RecentProjects = () => {
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10 ">
         {projects.map((item) => (
-          <div className="max-w-xs w-full group/card border border-white-100 rounded-tl-3xl rounded-br-3xl ">
+          <div key={item.id} className="max-w-xs w-full group/card border border-white-100 rounded-tl-3xl rounded-br-3xl ">
             <div
               className={cn(
                 " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col gap-2 justify-between p-4"
@@ -31,6 +31,7 @@ const RecentProjects = () => {
               <div className="flex flex-row items-center space-x-4 z-10">
                 {item.iconLists.map((icon) => (
                   <Image
+                  key={icon}
                     height="72"
                     width="72"
                     alt="Avatar"
