@@ -4,75 +4,65 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
+import { Compare } from "./ui/compare";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { ButtonsCard } from "./blocks/tailwinds-buttons";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20">
+    <div id="projects" className="py-20">
       <h1 className="heading">
-        A small selection of{" "}
-        <span className="text-purple">recent projects</span>
+        Mis <span className="text-sky-300/30">Proyectos Recientes</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10 ">
         {projects.map((item) => (
-          <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
-            key={item.id}
-          >
-            <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
+          <div className="max-w-xs w-full group/card border border-white-100 rounded-tl-3xl rounded-br-3xl ">
+            <div
+              className={cn(
+                " cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col gap-2 justify-between p-4"
+              )}
             >
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                  style={{ backgroundColor: "#13162D" }}
-                >
-                  <img src="/bg.png" alt="bgimg" />
-                </div>
-                <img
-                  src={item.img}
-                  alt="cover"
-                  className="z-10 absolute bottom-0"
-                />
+              <Compare
+                firstImage={item.img1}
+                secondImage={item.img2}
+                firstImageClassName="object-cover object-center w-full"
+                secondImageClassname="object-cover object-center w-full"
+                className="absolute top-0 left-0 w-full h-full rounded-[22px] md:rounded-lg"
+                slideMode="hover"
+                autoplay={true}
+              />
+
+              <div className="absolute w-full h-full top-0 left-0"></div>
+              <div className="flex flex-row items-center space-x-4 z-10">
+                {item.iconLists.map((icon) => (
+                  <Image
+                    height="72"
+                    width="72"
+                    alt="Avatar"
+                    src={icon}
+                    className="h-8 w-8 rounded-full border-2 object-cover"
+                  />
+                ))}
               </div>
-
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {item.title}
-              </h1>
-
-              <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
-              >
-                {item.des}
-              </p>
-
-              <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
-                    <div
-                      key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                      style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
-                      }}
-                    >
-                      <img src={icon} alt="icon5" className="p-2" />
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
+              <div className="text content">
+                <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
+                  {item.title}
+                </h1>
+                <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
+                  {item.des}
+                </p>
+                <div className="flex flex-row items-center justify-between z-10">
+                  <p className="font-normal text-base text-gray-50 relative z-10">
+                    {item.year}
                   </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+
+                  <a href={item.link} target="_blank" className="z-40 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                    Visitar
+                  </a>
                 </div>
               </div>
-            </PinContainer>
+            </div>
           </div>
         ))}
       </div>
