@@ -1,14 +1,8 @@
 "use client";
-
-import { FaLocationArrow } from "react-icons/fa6";
-
 import { projects } from "@/data";
-import { PinContainer } from "./ui/Pin";
 import { Compare } from "./ui/compare";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { ButtonsCard } from "./blocks/tailwinds-buttons";
-
 const RecentProjects = () => {
   return (
     <div id="projects" className="py-20">

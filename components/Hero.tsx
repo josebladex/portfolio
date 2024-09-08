@@ -1,14 +1,8 @@
 "use client";
-
-import { FaCode, FaLocationArrow } from "react-icons/fa6";
-
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import Image from "next/image";
-import { GoWorkflow } from "react-icons/go";
 import { TypewriterEffect } from "./ui/typewriter-effect";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
 import { GrDocumentDownload } from "react-icons/gr";

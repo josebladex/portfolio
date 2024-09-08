@@ -1,8 +1,5 @@
 "use client";
-import { animate, motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { GoCopilot } from "react-icons/go";
 import { EvervaultCard } from "../ui/evervault-card";
 
 export function CardStack() {

@@ -3,16 +3,12 @@
 import { FaGithub, FaLinkedin, FaProjectDiagram } from "react-icons/fa";
 
 import Hero from "@/components/Hero";
-import Grid from "@/components/Grid";
 import Approach from "@/components/Approach";
 import RecentProjects from "@/components/RecentProjects";
-import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { IconHome } from "@tabler/icons-react";
 import { FaInfoCircle } from "react-icons/fa";
-import { GrContact } from "react-icons/gr";
 import { CardStack } from "@/components/blocks/cardStack";
-import Image from "next/image";
 import { IoDocumentAttach } from "react-icons/io5";
 
 const links = [
@@ -52,7 +48,7 @@ const links = [
   },
 
 ];
-
+ 
 const Home = () => {
   return (
     <main className="relative bg-black flex justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5">

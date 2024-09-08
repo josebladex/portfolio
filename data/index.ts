@@ -1,44 +1,6 @@
 
 
 
-export const gridItems = [
-  {
-    id: 1,
-    title: "Mi Stack Tecnológico en Evolución",
-    description: "Explorando y dominando nuevas tecnologías",
-    className: "lg:col-span-3 md:col-span-4 md:row-span-2 lg:min-h-[60vh]",
-    imgClassName: "",
-    titleClassName: "justify-end",
-    img: "",
-    spareImg: "",
-  },
- 
-  {
-    id: 4,
-    title: "Entusiasta de la Tecnología y el Desarrollo",
-    description: "Apasionado por crear soluciones eficientes y elegantes.",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
-  },
-
-  {
-    id: 6,
-    title: "¿Te gustaría empezar un proyecto juntos?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
-  },
-
-
-
-];
-
 export const projects = [
   {
     id: 1,
@@ -82,19 +44,3 @@ export const projects = [
   },
 ];
 
-
-
-export const socialMedia = [
-  {
-    id: 1,
-    img: "/git.svg",
-  },
-  {
-    id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
-    img: "/link.svg",
-  },
-];
