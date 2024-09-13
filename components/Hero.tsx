@@ -2,13 +2,13 @@
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import Image from "next/image";
-import { TypewriterEffect } from "./ui/typewriter-effect";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
 import { GrDocumentDownload } from "react-icons/gr";
 import { useRouter } from "next/navigation";
 import { useLanguageStore } from "@/store/useLanguageStore";
 import { HeroData } from "@/data";
+import { Typewriter } from 'nextjs-simple-typewriter'
 
 const font_3270 = localFont({
   src: "../public/fonts/3270.ttf",
@@ -22,7 +22,7 @@ const Hero = () => {
   const heroData = HeroData[language][0]; // Accede al primer elemento del array
   const words = heroData?.words || []; // Asegúrate de que `words` esté definido
 
-
+  
   return (
     <div className="pb-20 pt-36 h-screen">
       <div>
@@ -68,14 +68,24 @@ const Hero = () => {
       </div>
 
       <div className="h-[20rem] flex flex-col gap-4 justify-center items-center relative z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <TypewriterEffect
-            words={words}
-            className={cn(
-              "text-center text-[40px] md:text-5xl lg:text-6xl",
-              font_3270.className // Directamente como string, sin llaves
-            )}
-          />
+        <div className="max-w-[89vw] text- md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+
+  
+        <span 
+  className={cn(
+    "px-6 text-center text-3xl md:text-5xl lg:text-6xl font-bold", 
+    font_3270.className // Directamente como string
+  )}
+>
+  <Typewriter
+    words={words}
+    loop={10000}
+    typeSpeed={85}
+    deleteSpeed={90}
+    delaySpeed={1000}
+  />
+</span>
+
         </div>
       </div>
 

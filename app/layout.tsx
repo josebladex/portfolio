@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <title>{currentLayout.title}</title>
         <meta name="description" content={currentLayout.description} />
         <meta name="keywords" content={currentLayout.keywords} />
-        <link rel="icon" href="/logo.ico" sizes="any" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
       <body className={inter.className}>
         <ThemeProvider

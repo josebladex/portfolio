@@ -5,19 +5,9 @@ export const HeroData = {
   es: [
     {
       words: [
-        { text: "¡Hola! " },
-        { text: "Soy" },
-        { text: "José" },
-        { text: "Plata," },
-        { text: "un" },
-        { text: "desarrollador" },
-        { text: "Full" },
-        { text: "Stack" },
-        { text: "y" },
-        { text: "Estudiante" },
-        { text: "de" },
-        { text: "Ingeniería" },
-        { text: "Mecatrónica." },
+        "¡Hola! Soy José Plata.",
+    "un desarrollador Full Stack",
+    "y Estudiante de Ingeniería Mecatrónica."
       ],
       buttonTitle: "Curriculum Vitae",
       
@@ -26,18 +16,9 @@ export const HeroData = {
   en: [
     {
       words: [
-        { text: "Hello! " },
-        { text: "I´m" },
-        { text: "Jose" },
-        { text: "Plata," },
-        { text: "a" },
-        { text: "Full" },
-        { text: "Stack" },
-        { text: "Developer" },
-        { text: "and" },
-        { text: "Mechatronic" },
-        { text: "Engineer" },
-        { text: "Student." },
+        "Hi! I'm José Plata.",
+        "a Full Stack Developer",
+        "and Mechatronics Engineering Student."
       ],
       buttonTitle: "Resume Jose Plata",
     }
