@@ -3,17 +3,19 @@ import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import localFont from "next/font/local";
 import { GrDocumentDownload } from "react-icons/gr";
 import { useRouter } from "next/navigation";
 import { useLanguageStore } from "@/store/useLanguageStore";
 import { HeroData } from "@/data";
 import { Typewriter } from 'nextjs-simple-typewriter'
 
-const font_3270 = localFont({
-  src: "../public/fonts/3270.ttf",
-  display: "swap",
-});
+import { M_PLUS_Code_Latin } from 'next/font/google'
+ 
+// If loading a variable font, you don't need to specify the font weight
+const M_PLUS_Code = M_PLUS_Code_Latin({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 const Hero = () => {
   const router = useRouter();
@@ -73,8 +75,8 @@ const Hero = () => {
   
         <span 
   className={cn(
-    "px-6 text-center text-3xl md:text-5xl lg:text-6xl font-bold", 
-    font_3270.className // Directamente como string
+    "px-6 text-center text-3xl md:text-5xl lg:text-6xl font-medium", 
+    M_PLUS_Code.className // Directamente como string
   )}
 >
   <Typewriter
