@@ -32,8 +32,8 @@ export const HeroData = {
 export const projects = {
   es: [
     {
-      "id": 0,
-      "title": "UTOPIA-ExoplanetQuest Navegador del Observatorio de Mundos Habitables",
+      "id": 1,
+      "title": "UTOPIA",
       "des": "Navegador para el Observatorio de Mundos Habitables (HWO): Mapeando los Exoplanetas Caracterizables en nuestra Galaxia para el Desafío Espacial NASA Space Apps 2024",
       "img1": "/projects/9.png",
       "img2": "/projects/10.png",
@@ -47,7 +47,7 @@ export const projects = {
       "year": "2024"
     },
     {
-      id: 1,
+      id: 2,
       title: "Mundo Pie",
       des: "Aplicación Web para Marketing y CRM de consultas clínicas",
       img1: "/projects/1.png",
@@ -64,7 +64,7 @@ export const projects = {
       year: "2023",
     },
     {
-      id: 2,
+      id: 3,
       title: "Electromagnetismo",
       des: "Programas diseñados para estudiar y analizar las experimentaciones de electromagnetismo.",
       img1: "/projects/2.png",
@@ -77,7 +77,7 @@ export const projects = {
       year: "2022",
     },
     {
-      id: 3,
+      id: 4,
       title: "EnriqueLeeApp",
       des: "Plataforma de red social",
       img1: "/projects/4.png",
@@ -91,7 +91,7 @@ export const projects = {
       year: "2022",
     },
     {
-      id: 4,
+      id: 5,
       title: "Gotarget",
       des: "Mi primer proyecto de landing page",
       img1: "/projects/6.png",
@@ -108,8 +108,8 @@ export const projects = {
   en: [
 
     {
-      id: 0,
-      title: "UTOPIA-ExoplanetQuest Habitable Worlds Observatory Navigator",
+      id: 1,
+      title: "UTOPIA",
       des: "Navigator for the Habitable Worlds Observatory (HWO): Mapping the Characterizable Exoplanets in our Galaxy for 2024 NASA Space Apps Challenge",
       img1: "/projects/9.png",
       img2: "/projects/10.png",
@@ -123,7 +123,7 @@ export const projects = {
       year: "2024",
     },
     {
-      id: 1,
+      id: 2,
       title: "Mundo Pie",
       des: "Web application for marketing and CRM of clinical consultations",
       img1: "/projects/1.png",
@@ -140,7 +140,7 @@ export const projects = {
       year: "2023",
     },
     {
-      id: 2,
+      id: 3,
       title: "Electromagnetism",
       des: "Programs designed to study and analyze electromagnetism experiments.",
       img1: "/projects/2.png",
@@ -153,7 +153,7 @@ export const projects = {
       year: "2022",
     },
     {
-      id: 3,
+      id: 4,
       title: "EnriqueLeeApp",
       des: "Social network platform",
       img1: "/projects/4.png",
@@ -167,7 +167,7 @@ export const projects = {
       year: "2022",
     },
     {
-      id: 4,
+      id: 5,
       title: "Gotarget",
       des: "My first landing page project",
       img1: "/projects/6.png",
