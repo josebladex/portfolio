@@ -32,6 +32,21 @@ export const HeroData = {
 export const projects = {
   es: [
     {
+      "id": 0,
+      "title": "UTOPIA-ExoplanetQuest Navegador del Observatorio de Mundos Habitables",
+      "des": "Navegador para el Observatorio de Mundos Habitables (HWO): Mapeando los Exoplanetas Caracterizables en nuestra Galaxia para el Desafío Espacial NASA Space Apps 2024",
+      "img1": "/projects/9.png",
+      "img2": "/projects/10.png",
+      "iconLists": [
+        "/three.svg",
+        "/next.svg",
+        "/bg/python-5.svg",
+        "/ts.svg"
+      ],
+      "link": "https://utopia-exoplanet-quest.vercel.app/",
+      "year": "2024"
+    },
+    {
       id: 1,
       title: "Mundo Pie",
       des: "Aplicación Web para Marketing y CRM de consultas clínicas",
@@ -91,6 +106,22 @@ export const projects = {
     },
   ],
   en: [
+
+    {
+      id: 0,
+      title: "UTOPIA-ExoplanetQuest Habitable Worlds Observatory Navigator",
+      des: "Navigator for the Habitable Worlds Observatory (HWO): Mapping the Characterizable Exoplanets in our Galaxy for 2024 NASA Space Apps Challenge",
+      img1: "/projects/9.png",
+      img2: "/projects/10.png",
+      iconLists: [
+        "/three.svg",
+        "/next.svg", 
+        "/bg/python-5.svg", 
+        "/ts.svg", 
+      ],
+      link: "https://utopia-exoplanet-quest.vercel.app/",
+      year: "2024",
+    },
     {
       id: 1,
       title: "Mundo Pie",

@@ -1,6 +1,6 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaProjectDiagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaPaypal, FaProjectDiagram } from "react-icons/fa";
 
 import Hero from "@/components/Hero";
 import Approach from "@/components/Approach";
@@ -46,6 +46,11 @@ const links = {
       icon: <IoDocumentAttach className="h-full w-full text-red-700" />,
       href: "https://drive.google.com/file/d/1HVcaT_WVPeF5X-VEQxuX3OB2wfXncvzY/view?usp=drive_link",
     },
+    {
+      title: "Invitame un Café!",
+      icon: <FaPaypal className="h-full w-full text-red-700" />,
+      href: "https://www.paypal.com/donate/?hosted_button_id=Q95SWXH9EVC7E",
+    },
   ],
   en: [
     {
@@ -77,6 +82,11 @@ const links = {
       title: "Resume",
       icon: <IoDocumentAttach className="h-full w-full text-red-700" />,
       href: "https://drive.google.com/file/d/1j6lr3R-awO9oJ6A_qT3o_IxCANyJmc0b/view?usp=sharing",
+    },
+    {
+      title: "Invite me a Coffee!",
+      icon: <FaPaypal className="h-full w-full text-red-700" />,
+      href: "https://www.paypal.com/donate/?hosted_button_id=Q95SWXH9EVC7E",
     },
   ]
 };
