@@ -54,10 +54,9 @@ export const projects = {
       img2: "/projects/8.png",
       iconLists: [
         "/next.svg", 
-        "/tail.svg", 
         "/ts.svg", 
         "/bg/postgresql.svg", 
-        "/bg/meta-svgrepo-com.svg", 
+        "/aws.svg", 
         "/bg/google-calendar-svgrepo-com.svg"
       ],
       link: "https://mundopie.cl/",

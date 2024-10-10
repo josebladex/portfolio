@@ -50,11 +50,11 @@ const RecentProjects = () => {
                 {item.iconLists.map((icon) => (
                   <Image
                   key={icon}
-                    height="72"
-                    width="72"
+                    height="96"
+                    width="96"
                     alt="Avatar"
                     src={icon}
-                    className="h-8 w-8 rounded-full border-2 object-cover"
+                    className="h-10 w-10 rounded-full border-2 object-cover p-1"
                   />
                 ))}
               </div>
