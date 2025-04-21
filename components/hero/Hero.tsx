@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import Preloader from '@/app/preloader';
+import Preloader from '@/components/hero/preloader';
 
 const Hero = () => {
   return (

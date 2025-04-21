@@ -27,18 +27,6 @@ export default function PreloaderConsole() {
   ]; // Array de textos para SplitText
   const delay = 1000; // Tiempo entre cada render en milisegundos
 
-  // Maneja el bloqueo del scroll
-  useEffect(() => {
-    if (!showBrowser) {
-      document.body.style.overflow = 'hidden'; // Bloquea el scroll
-    } else {
-      document.body.style.overflow = 'auto'; // Habilita el scroll
-    }
-
-    return () => {
-      document.body.style.overflow = 'auto'; // Asegura que el scroll se habilite al desmontar
-    };
-  }, [showBrowser]);
 
   // Maneja la animación del preloader
   useEffect(() => {
@@ -59,7 +47,7 @@ export default function PreloaderConsole() {
     const timeout = setTimeout(() => {
       setShowPreloader(false);
       setShowConsole(true);
-    }, 6000);
+    }, 5000);
 
     return () => {
       clearInterval(interval); // Limpia el intervalo al desmontar el componente
@@ -74,7 +62,7 @@ export default function PreloaderConsole() {
     const timeout = setTimeout(() => {
       setShowConsole(false);
       setShowBrowser(true); // Muestra el navegador después de la consola
-    }, 11000); // Duración total de la animación de la consola
+    }, 6000); // Duración total de la animación de la consola
 
     return () => clearTimeout(timeout);
   }, [showConsole]);

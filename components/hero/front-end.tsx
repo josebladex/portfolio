@@ -91,13 +91,20 @@ const Browser = () => {
             }
           }}
         />
-
-        {/* Botón para abrir #projects en una nueva pestaña */}
+ 
+        {/* Botón para abrir el currículum vitae en una nueva pestaña */}
         <MagicButton
           title={language === 'es' ? 'Currículum Vitae' : 'Resume'}
           icon={<IoDocumentAttachOutline />}
           position="right"
-          handleClick={() => window.open('#projects', '_blank')}
+          handleClick={() =>
+            window.open(
+              language === 'es'
+                ? 'https://drive.google.com/file/d/1HVcaT_WVPeF5X-VEQxuX3OB2wfXncvzY/view?usp=drive_link'
+                : 'https://drive.google.com/file/d/1j6lr3R-awO9oJ6A_qT3o_IxCANyJmc0b/view?usp=sharing',
+              '_blank'
+            )
+          }
         />
       </motion.div>
     </div>
