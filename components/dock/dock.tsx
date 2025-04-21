@@ -12,84 +12,84 @@ import {
 import { BiHome } from 'react-icons/bi';
 import { IoDocumentAttach } from 'react-icons/io5';
 import { useLanguageStore } from '@/store/useLanguageStore';
-
+export const links = {
+  es: [
+    {
+      title: 'Inicio',
+      icon: <BiHome className="h-full w-full text-red-700" />,
+      href: '/'
+    },
+    {
+      title: 'Sobre mí',
+      icon: <FaInfoCircle className="h-full w-full text-red-700" />,
+      href: '#about'
+    },
+    {
+      title: 'Proyectos',
+      icon: <FaProjectDiagram className="h-full w-full text-red-700" />,
+      href: '#projects'
+    },
+    {
+      title: 'Github',
+      icon: <FaGithub className="h-full w-full text-red-700" />,
+      href: 'https://github.com/josebladex'
+    },
+    {
+      title: 'LinkedIn',
+      icon: <FaLinkedin className="h-full w-full text-red-700" />,
+      href: 'https://www.linkedin.com/in/jose-luis-plata-zabala'
+    },
+    {
+      title: 'CV',
+      icon: <IoDocumentAttach className="h-full w-full text-red-700" />,
+      href: 'https://drive.google.com/file/d/1HLAdMxcPJQYXC47roAhVwciVvJNFqf7p/view?usp=sharing'
+    },
+    {
+      title: 'Invitame un Café!',
+      icon: <FaPaypal className="h-full w-full text-red-700" />,
+      href: 'https://www.paypal.com/donate/?hosted_button_id=Q95SWXH9EVC7E'
+    }
+  ],
+  en: [
+    {
+      title: 'Home',
+      icon: <BiHome className="h-full w-full text-red-700" />,
+      href: '/'
+    },
+    {
+      title: 'About Me',
+      icon: <FaInfoCircle className="h-full w-full text-red-700" />,
+      href: '#about'
+    },
+    {
+      title: 'Projects',
+      icon: <FaProjectDiagram className="h-full w-full text-red-700" />,
+      href: '#projects'
+    },
+    {
+      title: 'Github',
+      icon: <FaGithub className="h-full w-full text-red-700" />,
+      href: 'https://github.com/josebladex'
+    },
+    {
+      title: 'LinkedIn',
+      icon: <FaLinkedin className="h-full w-full text-red-700" />,
+      href: 'https://www.linkedin.com/in/jose-luis-plata-zabala'
+    },
+    {
+      title: 'Resume',
+      icon: <IoDocumentAttach className="h-full w-full text-red-700" />,
+      href: 'https://drive.google.com/file/d/1Pc-4q6XZUc-LO5g1I9sXhoExm6YeLvzw/view?usp=sharing'
+    },
+    {
+      title: 'Invite me a Coffee!',
+      icon: <FaPaypal className="h-full w-full text-red-700" />,
+      href: 'https://www.paypal.com/donate/?hosted_button_id=Q95SWXH9EVC7E'
+    }
+  ]
+};
 const Dock = () => {
-  const links = {
-    es: [
-      {
-        title: 'Inicio',
-        icon: <BiHome className="h-full w-full text-red-700" />,
-        href: '/'
-      },
-      {
-        title: 'Sobre mí',
-        icon: <FaInfoCircle className="h-full w-full text-red-700" />,
-        href: '#about'
-      },
-      {
-        title: 'Proyectos',
-        icon: <FaProjectDiagram className="h-full w-full text-red-700" />,
-        href: '#projects'
-      },
-      {
-        title: 'Github',
-        icon: <FaGithub className="h-full w-full text-red-700" />,
-        href: 'https://github.com/josebladex'
-      },
-      {
-        title: 'LinkedIn',
-        icon: <FaLinkedin className="h-full w-full text-red-700" />,
-        href: 'https://www.linkedin.com/in/jose-luis-plata-zabala'
-      },
-      {
-        title: 'CV',
-        icon: <IoDocumentAttach className="h-full w-full text-red-700" />,
-        href: 'https://drive.google.com/file/d/1HVcaT_WVPeF5X-VEQxuX3OB2wfXncvzY/view?usp=drive_link'
-      },
-      {
-        title: 'Invitame un Café!',
-        icon: <FaPaypal className="h-full w-full text-red-700" />,
-        href: 'https://www.paypal.com/donate/?hosted_button_id=Q95SWXH9EVC7E'
-      }
-    ],
-    en: [
-      {
-        title: 'Home',
-        icon: <BiHome className="h-full w-full text-red-700" />,
-        href: '/'
-      },
-      {
-        title: 'About Me',
-        icon: <FaInfoCircle className="h-full w-full text-red-700" />,
-        href: '#about'
-      },
-      {
-        title: 'Projects',
-        icon: <FaProjectDiagram className="h-full w-full text-red-700" />,
-        href: '#projects'
-      },
-      {
-        title: 'Github',
-        icon: <FaGithub className="h-full w-full text-red-700" />,
-        href: 'https://github.com/josebladex'
-      },
-      {
-        title: 'LinkedIn',
-        icon: <FaLinkedin className="h-full w-full text-red-700" />,
-        href: 'https://www.linkedin.com/in/jose-luis-plata-zabala'
-      },
-      {
-        title: 'Resume',
-        icon: <IoDocumentAttach className="h-full w-full text-red-700" />,
-        href: 'https://drive.google.com/file/d/1j6lr3R-awO9oJ6A_qT3o_IxCANyJmc0b/view?usp=sharing'
-      },
-      {
-        title: 'Invite me a Coffee!',
-        icon: <FaPaypal className="h-full w-full text-red-700" />,
-        href: 'https://www.paypal.com/donate/?hosted_button_id=Q95SWXH9EVC7E'
-      }
-    ]
-  };
+  
   const { language } = useLanguageStore();
 
   const dock = links[language];

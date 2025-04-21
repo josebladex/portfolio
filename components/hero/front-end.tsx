@@ -100,8 +100,8 @@ const Browser = () => {
           handleClick={() =>
             window.open(
               language === 'es'
-                ? 'https://drive.google.com/file/d/1HVcaT_WVPeF5X-VEQxuX3OB2wfXncvzY/view?usp=drive_link'
-                : 'https://drive.google.com/file/d/1j6lr3R-awO9oJ6A_qT3o_IxCANyJmc0b/view?usp=sharing',
+                ? 'https://drive.google.com/file/d/1HLAdMxcPJQYXC47roAhVwciVvJNFqf7p/view?usp=sharing'
+                : 'https://drive.google.com/file/d/1Pc-4q6XZUc-LO5g1I9sXhoExm6YeLvzw/view?usp=sharing',
               '_blank'
             )
           }

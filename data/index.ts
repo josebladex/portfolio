@@ -1,25 +1,4 @@
-export const HeroData = {
-  es: [
-    {
-      words: [
-        '¡Hola! Soy José Plata.',
-        'un desarrollador Full Stack',
-        'y Estudiante de Ingeniería Mecatrónica.'
-      ],
-      buttonTitle: 'Curriculum Vitae'
-    }
-  ],
-  en: [
-    {
-      words: [
-        "Hi! I'm José Plata.",
-        'a Full Stack Developer',
-        'and Mechatronics Engineering Student.'
-      ],
-      buttonTitle: 'Resume Jose Plata'
-    }
-  ]
-};
+
 
 export const projects = {
   es: [
