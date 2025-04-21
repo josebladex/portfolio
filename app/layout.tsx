@@ -1,51 +1,70 @@
- "use client"
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import Dock from '@/components/dock/dock';
 
-// layout.tsx (o el archivo de layout correspondiente)
-import { Inter } from "next/font/google";
-import Head from "next/head"; // Importa Head desde next/head
-import "./globals.css";
-import { ThemeProvider } from "./provider";
-import { useLanguageStore } from "@/store/useLanguageStore";
-import { Analytics } from "@vercel/analytics/react"
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin']
+});
 
-const inter = Inter({ subsets: ["latin"] });
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin']
+});
 
-const layouts = {
-  es: {
-    title: "José Plata - Portafolio",
-    description: "Portafolio de José Luis Plata, desarrollador full stack con experiencia en Next.js, Supabase, PostgreSQL, y más. Proyectos innovadores en software y mecatrónica.",
-    keywords: "José Luis Plata, desarrollador full stack, portafolio, Next.js, Supabase, PostgreSQL, Ingeniería Mecatrónica, Santiago, Colombia, Panamá, Chile, desarrollo web, software, proyectos mecatrónica",
-  },
-  en: {
-    title: "José Plata - Portfolio",
-    description: "Portfolio of José Luis Plata, full stack developer with experience in Next.js, Supabase, PostgreSQL, and more. Innovative projects in software and mechatronics.",
-    keywords: "José Luis Plata, full stack developer, portfolio, Next.js, Supabase, PostgreSQL, Mechatronic Engineering, Santiago, Colombia, Panama, Chile, web development, software, mechatronics projects",
+export const metadata: Metadata = {
+  title: 'José Plata - Full Stack Developer Portfolio',
+  description:
+    'Descubre el portafolio de José Plata, desarrollador Full Stack especializado en React, Next.js, Prisma y más. Proyectos destacados y experiencia profesional.',
+  keywords: [
+    'José Plata',
+    'Full Stack Developer',
+    'Portafolio',
+    'React',
+    'Next.js',
+    'Prisma',
+    'PostgreSQL',
+    'Docker',
+    'Desarrollador Web',
+    'Proyectos de Software'
+  ],
+  viewport: 'width=device-width, initial-scale=1.0',
+  robots: 'index, follow',
+  openGraph: {
+    title: 'José Plata - Full Stack Developer Portfolio',
+    description:
+      'Explora los proyectos y experiencia de José Plata, desarrollador Full Stack.',
+    url: 'https://joseplata.dev',
+    siteName: 'José Plata Portfolio',
+    locale: 'en_US',
+    type: 'website'
   }
+  /*twitter: {
+    card: 'summary_large_image',
+    site: '@joseplata',
+    creator: '@joseplata',
+    title: 'José Plata - Full Stack Developer Portfolio',
+    description: 'Descubre los proyectos y experiencia de José Plata, desarrollador Full Stack.',
+    images: ['https://joseplata.dev/og-image.jpg']
+  }*/
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const { language } = useLanguageStore();
-  const currentLayout = layouts[language];
-
+export default function RootLayout({
+  children
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang={language} suppressHydrationWarning>
-      <Head>
-        <title>{currentLayout.title}</title>
-        <meta name="description" content={currentLayout.description} />
-        <meta name="keywords" content={currentLayout.keywords} />
-        <link rel="icon" href="/logo.ico" />
-      </Head>
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressContentEditableWarning
+        suppressHydrationWarning
+      >
+        <Dock />
 
-        </ThemeProvider>
-        <Analytics />
+        {children}
       </body>
     </html>
   );

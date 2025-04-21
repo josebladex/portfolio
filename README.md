@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# José Plata - Full Stack Developer Portfolio
 
-## Getting Started
+Este es el repositorio del portafolio personal de **José Plata**.
 
-First, run the development server:
+## 🚀 Tecnologías Utilizadas
 
+- **Framework**: [Next.js](https://nextjs.org) (App Router)
+- **Lenguaje**: TypeScript
+- **Estilos**: Tailwind CSS
+- **Fuentes**: [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts)
+- **Animaciones**: Framer Motion
+- **Estado Global**: Zustand
+- **Despliegue**: [Vercel](https://vercel.com)
+
+## 🌟 Características
+
+- **Diseño Responsivo**: Optimizado para dispositivos móviles, tablets y escritorios.
+- **Animaciones Interactivas**: Uso de Framer Motion para transiciones fluidas.
+- **Soporte Multilenguaje**: Implementación de un sistema de idiomas con Zustand.
+- **Proyectos Destacados**: Sección de proyectos con imágenes interactivas y descripciones.
+- **Preloader Animado**: Simulación de consola interactiva al cargar el sitio.
+- **Despliegue en Producción**: Hospedado en Vercel con optimización para SEO.
+
+
+## 🛠️ Instalación y Uso
+
+Sigue estos pasos para ejecutar el proyecto en tu máquina local:
+
+### 1. Clonar el repositorio
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/josebladex/portfolio-v2.git
+cd portfolio-v2/my-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Instalar dependencias
+```bash
+npm install
+# o
+yarn install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Ejecutar el servidor de desarrollo
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el proyecto.
 
-## Learn More
+## 🌐 Despliegue
 
-To learn more about Next.js, take a look at the following resources:
+Este proyecto está desplegado en [Vercel](https://vercel.com). Puedes acceder al portafolio en el siguiente enlace:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🔗 **[https://joseplata.dev](https://joseplata.dev)**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 🤝 Contribuciones
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Las contribuciones son bienvenidas. Si encuentras algún problema o tienes sugerencias, por favor abre un [issue](https://github.com/josebladex/portfolio/issues) o envía un pull request.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 Licencia
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+---
+
+💻 **Desarrollado por José Plata**  
+Conecta conmigo en [LinkedIn](https://www.linkedin.com/in/joseplata) o visita mi portafolio en [https://joseplata.dev](https://joseplata.dev).
