@@ -1,17 +1,16 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geo } from 'next/font/google';
 import './globals.css';
 import Dock from '@/components/dock/dock';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin']
+
+// Importa las fuentes desde next/font/google
+const geo = Geo({
+  weight: '400',
+  subsets: ['latin'],
+  style: ['normal', 'italic']
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin']
-});
 
 export const metadata: Metadata = {
   title: 'José Plata - Full Stack Developer Portfolio',
@@ -40,14 +39,6 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website'
   }
-  /*twitter: {
-    card: 'summary_large_image',
-    site: '@joseplata',
-    creator: '@joseplata',
-    title: 'José Plata - Full Stack Developer Portfolio',
-    description: 'Descubre los proyectos y experiencia de José Plata, desarrollador Full Stack.',
-    images: ['https://joseplata.dev/og-image.jpg']
-  }*/
 };
 
 export default function RootLayout({
@@ -58,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geo.className}`}
         suppressContentEditableWarning
         suppressHydrationWarning
       >

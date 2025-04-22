@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Doto, Geo, Jacquard_12 } from 'next/font/google';
+import { Geo, Jacquard_12 } from 'next/font/google';
 import MagicButton from '@/components/MagicButton';
 import { FaFolderOpen } from 'react-icons/fa'; // Importa íconos de react-icons
 import { useLanguageStore } from '@/store/useLanguageStore'; // Importa el hook de Zustand
@@ -13,12 +13,6 @@ const geo = Geo({
   weight: '400',
   subsets: ['latin'],
   style: ['normal', 'italic']
-});
-
-const doto = Doto({
-  weight: '400',
-  subsets: ['latin'],
-  style: ['normal']
 });
 
 const rubikIso = Jacquard_12({
@@ -48,15 +42,15 @@ const Browser = () => {
 
       {/* Contenido del navegador */}
       <motion.div
-        className={`flex flex-col space-y-4 text-gray-300 ${rubikIso.className}`}
+        className={`flex flex-col space-y-4 text-gray-300 ${geo.className}`}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         {/* Texto principal con soporte para múltiples idiomas */}
         <p
-          className={`${doto.className} font-bold`}
-          style={{ fontSize: 'clamp(2rem, 5vw, 6rem)' }} // Ajusta el tamaño de la fuente dinámicamente
+          className={`${rubikIso.className} font-bold`}
+          style={{ fontSize: 'clamp(4rem, 8vw, 10rem)' }} // Ajusta el tamaño de la fuente dinámicamente
         >
           {language === 'es'
             ? 'Hola, soy Jose Plata'
@@ -65,7 +59,7 @@ const Browser = () => {
               : 'Hello, I am Jose Plata'}
         </p>
         <span
-          className="text-green-400 font-medium"
+          className="text-green-400 font-bold underline decoration-dotted"
           style={{ fontSize: 'clamp(1.5rem, 4vw, 4rem)' }} // Ajusta el tamaño de la fuente dinámicamente
         >
           Full Stack Developer
