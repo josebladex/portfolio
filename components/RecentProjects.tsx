@@ -10,6 +10,9 @@ const RecentProjects = () => {
   const { language } = useLanguageStore();
   const projectStore = projects[language];
 
+  // Ordena por id descendente (más reciente primero)
+  const sortedProjects = [...projectStore].sort((a, b) => b.id - a.id);
+
   return (
     <div id="projects" className="py-20">
       <h1 className="font-bold text-4xl md:text-5xl text-center">
@@ -23,7 +26,7 @@ const RecentProjects = () => {
         </span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10 ">
-        {projectStore.map(item => (
+        {sortedProjects.map(item => (
           <div
             key={item.id}
             className="max-w-xs w-full group/card border border-white-100 rounded-tl-3xl rounded-br-3xl "
