@@ -15,7 +15,7 @@ export const EvervaultCard = ({
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const [pythonCode, setPythonCode] = useState(() => generateCodeSnippet());
+  const [pythonCode, setPythonCode] = useState(() => generateCodeSnippet(0));
 
   function onMouseMove({ currentTarget, clientX, clientY }: any) {
     const { left, top } = currentTarget.getBoundingClientRect();
@@ -74,7 +74,7 @@ export function CardPattern({ mouseX, mouseY, pythonCode }: any) {
   );
 }
 
-const generateCodeSnippet = () => {
+const generateCodeSnippet = (index?: number) => {
   const codeSnippets = [
     `<?xml version="1.0" encoding="utf-8"?>
   <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -328,6 +328,6 @@ const generateCodeSnippet = () => {
     `0101101011110110101101010101010101011110101010101110101011010101010101010101011110101010101110101011010101010101010101011110101010101110101011010101010101010101011110101010101110101011010101010101010101011110101010101110101011010101010101010101011110101010101110101011010101010101010101011110101010101110101011010101010101010101011110101010101110101`
   ];
 
-  const randomIndex = Math.floor(Math.random() * codeSnippets.length);
-  return codeSnippets[randomIndex];
+  const snippetIndex = index ?? Math.floor(Math.random() * codeSnippets.length);
+  return codeSnippets[snippetIndex];
 };

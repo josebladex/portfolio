@@ -1,12 +1,10 @@
 'use client';
 
-import React from 'react';
 import { FloatingDock } from './floating-dock';
 import {
   FaGithub,
   FaInfoCircle,
   FaLinkedin,
-  FaPaypal,
   FaProjectDiagram
 } from 'react-icons/fa';
 import { BiHome } from 'react-icons/bi';
@@ -43,11 +41,6 @@ export const links = {
       title: 'CV',
       icon: <IoDocumentAttach className="h-full w-full text-red-700" />,
       href: 'https://drive.google.com/file/d/1HLAdMxcPJQYXC47roAhVwciVvJNFqf7p/view?usp=sharing'
-    },
-    {
-      title: 'Invitame un Café!',
-      icon: <FaPaypal className="h-full w-full text-red-700" />,
-      href: 'https://www.paypal.com/donate/?hosted_button_id=Q95SWXH9EVC7E'
     }
   ],
   en: [
@@ -80,16 +73,10 @@ export const links = {
       title: 'Resume',
       icon: <IoDocumentAttach className="h-full w-full text-red-700" />,
       href: 'https://drive.google.com/file/d/1Pc-4q6XZUc-LO5g1I9sXhoExm6YeLvzw/view?usp=sharing'
-    },
-    {
-      title: 'Invite me a Coffee!',
-      icon: <FaPaypal className="h-full w-full text-red-700" />,
-      href: 'https://www.paypal.com/donate/?hosted_button_id=Q95SWXH9EVC7E'
     }
   ]
 };
 const Dock = () => {
-  
   const { language } = useLanguageStore();
 
   const dock = links[language];

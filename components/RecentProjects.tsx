@@ -33,15 +33,16 @@ const RecentProjects = () => {
           >
             <div
               className={cn(
-                ' cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl  max-w-sm mx-auto backgroundImage flex flex-col gap-2 justify-between p-4'
+                'cursor-pointer overflow-hidden relative card rounded-md shadow-xl max-w-sm mx-auto backgroundImage flex flex-col gap-2 justify-between p-4',
+                'h-96'
               )}
             >
               <Compare
                 firstImage={item.img1}
                 secondImage={item.img2}
-                firstImageClassName="object-cover object-center w-full"
-                secondImageClassname="object-cover object-center w-full"
-                className="absolute top-0 left-0 w-full h-full rounded-[22px] md:rounded-lg"
+                firstImageClassName="object-cover object-center w-full h-full"
+                secondImageClassname="object-cover object-center w-full h-full"
+                className="absolute top-0 left-0 h-full w-full rounded-[22px] md:rounded-lg"
                 slideMode="hover"
                 autoplay={true}
               />
@@ -66,17 +67,40 @@ const RecentProjects = () => {
                 <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
                   {item.des}
                 </p>
+                {item.meta ? (
+                  <div className="relative z-10 mb-3 flex flex-wrap gap-2">
+                    {item.meta.map(meta => (
+                      <span
+                        key={meta}
+                        className="rounded-full border border-white/20 bg-black/40 px-2 py-1 text-[10px] font-medium text-gray-100"
+                      >
+                        {meta}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
+                {item.details ? (
+                  <ul className="relative z-10 mb-4 list-disc space-y-1 pl-4 text-xs font-normal text-gray-100">
+                    {item.details.map(detail => (
+                      <li key={detail}>{detail}</li>
+                    ))}
+                  </ul>
+                ) : null}
                 <div className="flex flex-row items-center justify-between z-10">
                   <p className="font-normal text-base text-gray-50 relative z-10">
                     {item.year}
                   </p>
 
-                  <MagicButton
-                    title=""
-                    icon={<IconExternalLink />}
-                    position="left"
-                    handleClick={() => window.open(item.link, '_blank')}
-                  />
+                  {item.link ? (
+                    <MagicButton
+                      title=""
+                      icon={<IconExternalLink />}
+                      position="left"
+                      buttonClasses="h-8 md:mt-0 rounded-md"
+                      otherClasses="rounded-md px-3 text-sm [&_svg]:size-4"
+                      handleClick={() => window.open(item.link, '_blank')}
+                    />
+                  ) : null}
                 </div>
               </div>
             </div>
