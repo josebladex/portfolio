@@ -16,13 +16,22 @@
 # next.js
 /.next/
 /out/
+.turbo/
+.cache/
+.parcel-cache/
 
 # production
 /build
 
 # misc
 .DS_Store
+Thumbs.db
 *.pem
+*.swp
+*.swo
+.vscode/
+.idea/
+.atl/
 
 # debug
 npm-debug.log*
@@ -35,6 +44,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+.vercel/output/
 
 # typescript
 *.tsbuildinfo

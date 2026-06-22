@@ -126,14 +126,14 @@ export default function PreloaderConsole() {
                   content={`node init.js
 npm install
 Installing dependencies...
-\t- @react-three/fiber": "^9.1.2
-\t- @tailwindcss/cli": "^4.1.4
-\t- "date-fns": "^4.1.0",
-\t- "motion": "^12.7.4",
-\t- "next": "15.3.1",
-\t- "react": "^19.0.0",
-\t- "motion-plus": "^0.1.6",
-\t- "zustand": "^5.0.3,
+\t- @react-three/fiber": "^9.6.1
+\t- @tailwindcss/cli": "^4.3.0
+\t- "date-fns": "^4.4.0",
+\t- "motion": "^12.40.0",
+\t- "next": "^16.2.7",
+\t- "react": "^19.2.7",
+\t- "motion-plus": "^1.5.1",
+\t- "zustand": "^5.0.14,
 
 Dependencies installed successfully!
 
@@ -141,7 +141,7 @@ npm run dev
 Starting development server...
 > Compiling...
 > Compilation successful!
-> Server running at https://joseplata.dev/
+> Server running at https://josebladex.github.io/portfolio/
 `}
                   speed={10}
                 />

@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Geo, Jacquard_12 } from 'next/font/google';
+import { Geo } from 'next/font/google';
+import localFont from 'next/font/local';
 import MagicButton from '@/components/MagicButton';
 import { FaFolderOpen } from 'react-icons/fa'; // Importa íconos de react-icons
 import { useLanguageStore } from '@/store/useLanguageStore'; // Importa el hook de Zustand
@@ -15,10 +15,9 @@ const geo = Geo({
   style: ['normal', 'italic']
 });
 
-const rubikIso = Jacquard_12({
-  weight: '400',
-  subsets: ['latin'],
-  style: ['normal']
+const displayFont = localFont({
+  src: '../../public/fonts/3270.ttf',
+  display: 'swap'
 });
 
 const Browser = () => {
@@ -49,7 +48,7 @@ const Browser = () => {
       >
         {/* Texto principal con soporte para múltiples idiomas */}
         <p
-          className={`${rubikIso.className} font-bold`}
+          className={`${displayFont.className} font-bold`}
           style={{ fontSize: 'clamp(4rem, 8vw, 10rem)' }} // Ajusta el tamaño de la fuente dinámicamente
         >
           {language === 'es'
@@ -85,7 +84,7 @@ const Browser = () => {
             }
           }}
         />
- 
+
         {/* Botón para abrir el currículum vitae en una nueva pestaña */}
         <MagicButton
           title={language === 'es' ? 'Currículum Vitae' : 'Resume'}

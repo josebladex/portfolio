@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState, type CSSProperties } from 'react';
 import { Geo } from 'next/font/google';
 
 const geo = Geo({
@@ -13,20 +13,19 @@ interface TypeWriterProps {
   speed?: number; // Velocidad de escritura en milisegundos
 }
 
-const TypeWriter: React.FC<TypeWriterProps> = ({
+export default function TypeWriter({
   content = '',
   speed = 100
-}) => {
-  const [displayedContent, setDisplayedContent] = useState(''); // Contenido mostrado
+}: TypeWriterProps) {
   const [index, setIndex] = useState(0); // Índice del carácter actual
-  const [showCursor, setShowCursor] = useState(true); // Controla la visibilidad del cursor
+  const displayedContent = content.slice(0, index + 1);
+  const showCursor = index < content.length - 1;
 
   useEffect(() => {
     const animKey = setInterval(() => {
       setIndex(prevIndex => {
         if (prevIndex >= content.length - 1) {
           clearInterval(animKey); // Detén la animación cuando se complete
-          setShowCursor(false); // Oculta el cursor al finalizar
           return prevIndex;
         }
         return prevIndex + 1;
@@ -36,12 +35,8 @@ const TypeWriter: React.FC<TypeWriterProps> = ({
     return () => clearInterval(animKey); // Limpia el intervalo al desmontar
   }, [content, speed]);
 
-  useEffect(() => {
-    setDisplayedContent(prev => prev + content[index]); // Agrega el carácter actual al contenido mostrado
-  }, [index, content]);
-
   // Estilo para la animación de parpadeo del cursor
-  const cursorStyle: React.CSSProperties = {
+  const cursorStyle: CSSProperties = {
     display: 'inline-block',
     width: '2px',
     height: '1em',
@@ -70,6 +65,4 @@ const TypeWriter: React.FC<TypeWriterProps> = ({
       {showCursor && <span style={cursorStyle}></span>}
     </pre>
   );
-};
-
-export default TypeWriter;
+}

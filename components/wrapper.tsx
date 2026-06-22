@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import { publicAsset } from '@/lib/public-asset';
 
 export default function LandingWrapper({ children }: { children: ReactNode }) {
   return (
@@ -6,7 +7,7 @@ export default function LandingWrapper({ children }: { children: ReactNode }) {
       <div
         className="absolute inset-0 opacity-50"
         style={{
-          backgroundImage: 'url("/footer-grid.svg")',
+          backgroundImage: `url("${publicAsset('/footer-grid.svg')}")`,
           backgroundRepeat: 'repeat', // Esto hace que la imagen se repita
           backgroundSize: 'contain', // Puedes usar 'contain' o 'auto' para ajustar el tamaño
           objectFit: 'cover'

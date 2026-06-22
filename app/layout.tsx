@@ -1,8 +1,8 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
+import type { ReactNode } from 'react';
 import { Geo } from 'next/font/google';
 import './globals.css';
 import Dock from '@/components/dock/dock';
-
 
 // Importa las fuentes desde next/font/google
 const geo = Geo({
@@ -10,7 +10,6 @@ const geo = Geo({
   subsets: ['latin'],
   style: ['normal', 'italic']
 });
-
 
 export const metadata: Metadata = {
   title: 'José Plata - Full Stack Developer Portfolio',
@@ -28,23 +27,27 @@ export const metadata: Metadata = {
     'Desarrollador Web',
     'Proyectos de Software'
   ],
-  viewport: 'width=device-width, initial-scale=1.0',
   robots: 'index, follow',
   openGraph: {
     title: 'José Plata - Full Stack Developer Portfolio',
     description:
       'Explora los proyectos y experiencia de José Plata, desarrollador Full Stack.',
-    url: 'https://joseplata.dev',
+    url: 'https://josebladex.github.io/portfolio/',
     siteName: 'José Plata Portfolio',
     locale: 'en_US',
     type: 'website'
   }
 };
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1
+};
+
 export default function RootLayout({
   children
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
