@@ -562,6 +562,15 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       filename: 'Platzi - English Placement Test B1.png',
       driveUrl:
         'https://drive.google.com/file/d/1u7lP1rJ8l1S3POCt0k13R3-RzaS-uc6M/view?usp=drive_link'
+    },
+    {
+      id: 13,
+      issuer: 'Cambridge English',
+      name: 'Cambridge English Entry Level Certificate in ESOL International (Entry 2) (Key)',
+      year: '2015',
+      filename: 'KEY TEST ENGLISH CAMBRIDGE_rotated.pdf',
+      driveUrl:
+        'https://drive.google.com/file/d/1yhprIefPK7DjdNrHeCfeX5S5xQRwWn3P/view?usp=drive_link'
     }
   ],
   [LANGUAGE_CODES.EN]: [
@@ -677,6 +686,15 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       filename: 'Platzi - English Placement Test B1.png',
       driveUrl:
         'https://drive.google.com/file/d/1u7lP1rJ8l1S3POCt0k13R3-RzaS-uc6M/view?usp=drive_link'
+    },
+    {
+      id: 13,
+      issuer: 'Cambridge English',
+      name: 'Cambridge English Entry Level Certificate in ESOL International (Entry 2) (Key)',
+      year: '2015',
+      filename: 'KEY TEST ENGLISH CAMBRIDGE_rotated.pdf',
+      driveUrl:
+        'https://drive.google.com/file/d/1yhprIefPK7DjdNrHeCfeX5S5xQRwWn3P/view?usp=drive_link'
     }
   ]
 };
