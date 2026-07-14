@@ -2,6 +2,7 @@
 
 import { FloatingDock } from './floating-dock';
 import {
+  FaCertificate,
   FaGithub,
   FaInfoCircle,
   FaLinkedin,
@@ -26,6 +27,11 @@ export const links = {
       title: 'Proyectos',
       icon: <FaProjectDiagram className="h-full w-full text-red-700" />,
       href: '#projects'
+    },
+    {
+      title: 'Certificaciones',
+      icon: <FaCertificate className="h-full w-full text-red-700" />,
+      href: '#certificates'
     },
     {
       title: 'Github',
@@ -58,6 +64,11 @@ export const links = {
       title: 'Projects',
       icon: <FaProjectDiagram className="h-full w-full text-red-700" />,
       href: '#projects'
+    },
+    {
+      title: 'Certifications',
+      icon: <FaCertificate className="h-full w-full text-red-700" />,
+      href: '#certificates'
     },
     {
       title: 'Github',
