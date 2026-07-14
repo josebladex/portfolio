@@ -20,16 +20,12 @@ interface ProjectItem {
   details?: string[];
 }
 
-export type CertificateFileType = 'pdf' | 'png' | 'jpg' | 'jpeg';
-
 export interface CertificateItem {
   id: number;
   issuer: string;
   name: string;
   year: string;
-  fileType: CertificateFileType;
   filename: string;
-  driveId: string;
   driveUrl: string;
 }
 
@@ -459,10 +455,8 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'Coursera',
       name: 'Google Cloud DevOps Engineer Professional Certificate',
       year: '',
-      fileType: 'pdf',
       filename:
         'Coursera - Google Cloud DevOps Engineer Professional Certificate.pdf',
-      driveId: '14buisYPBge8cItSppCXGUVlg2DLLCoyr',
       driveUrl:
         'https://drive.google.com/file/d/14buisYPBge8cItSppCXGUVlg2DLLCoyr/view?usp=drive_link'
     },
@@ -471,9 +465,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'Coursera',
       name: 'Logging and Monitoring in Google Cloud',
       year: '',
-      fileType: 'pdf',
       filename: 'Coursera - Logging and Monitoring in Google Cloud.pdf',
-      driveId: '1zsK77OYiYnlMi2X8b4xRVm3Iyn1v_avQ',
       driveUrl:
         'https://drive.google.com/file/d/1zsK77OYiYnlMi2X8b4xRVm3Iyn1v_avQ/view?usp=drive_link'
     },
@@ -482,10 +474,8 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'Coursera',
       name: 'Reliable Google Cloud Infrastructure: Design and Process',
       year: '',
-      fileType: 'pdf',
       filename:
         'Coursera - Reliable Google Cloud Infrastructure - Design and Process.pdf',
-      driveId: '11wNRHS9PJTpzeNylhQDPzL-eRwg2g7Z_',
       driveUrl:
         'https://drive.google.com/file/d/11wNRHS9PJTpzeNylhQDPzL-eRwg2g7Z_/view?usp=drive_link'
     },
@@ -494,10 +484,8 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'freeCodeCamp',
       name: 'Back End Development and APIs',
       year: '2023',
-      fileType: 'png',
       filename:
         'freeCodeCamp - Back End Development and APIs - 2023-01-08.png',
-      driveId: '1-H-Fjpr-cTfCQg0XZwQ-Jx4VMPSoNtSs',
       driveUrl:
         'https://drive.google.com/file/d/1-H-Fjpr-cTfCQg0XZwQ-Jx4VMPSoNtSs/view?usp=drive_link'
     },
@@ -506,9 +494,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'freeCodeCamp',
       name: 'Foundational C# with Microsoft',
       year: '2025',
-      fileType: 'png',
       filename: 'freeCodeCamp - Foundational C# with Microsoft - 2025-04-29.png',
-      driveId: '1ET9-mawYyyA-w_2tNNMN4z5L_fj3u7WQ',
       driveUrl:
         'https://drive.google.com/file/d/1ET9-mawYyyA-w_2tNNMN4z5L_fj3u7WQ/view?usp=drive_link'
     },
@@ -517,10 +503,8 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'freeCodeCamp',
       name: 'Front End Development Libraries',
       year: '2023',
-      fileType: 'png',
       filename:
         'freeCodeCamp - Front End Development Libraries - 2023-01-06.png',
-      driveId: '1dQr_NmXlPlVNvcqYrpF1tKANosgpVHBi',
       driveUrl:
         'https://drive.google.com/file/d/1dQr_NmXlPlVNvcqYrpF1tKANosgpVHBi/view?usp=drive_link'
     },
@@ -529,10 +513,8 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'freeCodeCamp',
       name: 'Legacy JavaScript Algorithms and Data Structures',
       year: '2022',
-      fileType: 'png',
       filename:
         'freeCodeCamp - Legacy JavaScript Algorithms and Data Structures - 2022-12-13.png',
-      driveId: '1zH4acIPkYvUx9dFmphNPLRBzctWlGfMF',
       driveUrl:
         'https://drive.google.com/file/d/1zH4acIPkYvUx9dFmphNPLRBzctWlGfMF/view?usp=drive_link'
     },
@@ -541,9 +523,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'freeCodeCamp',
       name: 'Responsive Web Design',
       year: '2022',
-      fileType: 'png',
       filename: 'freeCodeCamp - Responsive Web Design - 2022-09-27.png',
-      driveId: '1uX6GZbHcTLit2nli7IgJjrxDZcrl9lK7',
       driveUrl:
         'https://drive.google.com/file/d/1uX6GZbHcTLit2nli7IgJjrxDZcrl9lK7/view?usp=drive_link'
     },
@@ -552,9 +532,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'MEDUCA',
       name: 'Tutorías de Robótica',
       year: '2023',
-      fileType: 'jpg',
       filename: 'MEDUCA - Tutorías de Robótica - 2023-07-27.jpg',
-      driveId: '1zBKFRy1o40lX36S8Z-wuBJd4h1ryJqw_',
       driveUrl:
         'https://drive.google.com/file/d/1zBKFRy1o40lX36S8Z-wuBJd4h1ryJqw_/view?usp=drive_link'
     },
@@ -563,9 +541,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'NASA Space Apps',
       name: 'Space Apps Challenge 2024',
       year: '2024',
-      fileType: 'pdf',
       filename: 'NASA Space Apps Challenge 2024.pdf',
-      driveId: '1IXgIlji4IaUW87PWobubqPQ40SV0vHTt',
       driveUrl:
         'https://drive.google.com/file/d/1IXgIlji4IaUW87PWobubqPQ40SV0vHTt/view?usp=drive_link'
     },
@@ -574,9 +550,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'NASA Space Apps',
       name: 'Space Apps Challenge 2025',
       year: '2025',
-      fileType: 'pdf',
       filename: 'NASA Space Apps Challenge 2025.pdf',
-      driveId: '12lzaqbbwjihh7EJi-DDfrD86s1ztrn4h',
       driveUrl:
         'https://drive.google.com/file/d/12lzaqbbwjihh7EJi-DDfrD86s1ztrn4h/view?usp=drive_link'
     },
@@ -585,9 +559,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'Platzi',
       name: 'English Placement Test (B1)',
       year: '',
-      fileType: 'png',
       filename: 'Platzi - English Placement Test B1.png',
-      driveId: '1u7lP1rJ8l1S3POCt0k13R3-RzaS-uc6M',
       driveUrl:
         'https://drive.google.com/file/d/1u7lP1rJ8l1S3POCt0k13R3-RzaS-uc6M/view?usp=drive_link'
     }
@@ -598,10 +570,8 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'Coursera',
       name: 'Google Cloud DevOps Engineer Professional Certificate',
       year: '',
-      fileType: 'pdf',
       filename:
         'Coursera - Google Cloud DevOps Engineer Professional Certificate.pdf',
-      driveId: '14buisYPBge8cItSppCXGUVlg2DLLCoyr',
       driveUrl:
         'https://drive.google.com/file/d/14buisYPBge8cItSppCXGUVlg2DLLCoyr/view?usp=drive_link'
     },
@@ -610,9 +580,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'Coursera',
       name: 'Logging and Monitoring in Google Cloud',
       year: '',
-      fileType: 'pdf',
       filename: 'Coursera - Logging and Monitoring in Google Cloud.pdf',
-      driveId: '1zsK77OYiYnlMi2X8b4xRVm3Iyn1v_avQ',
       driveUrl:
         'https://drive.google.com/file/d/1zsK77OYiYnlMi2X8b4xRVm3Iyn1v_avQ/view?usp=drive_link'
     },
@@ -621,10 +589,8 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'Coursera',
       name: 'Reliable Google Cloud Infrastructure: Design and Process',
       year: '',
-      fileType: 'pdf',
       filename:
         'Coursera - Reliable Google Cloud Infrastructure - Design and Process.pdf',
-      driveId: '11wNRHS9PJTpzeNylhQDPzL-eRwg2g7Z_',
       driveUrl:
         'https://drive.google.com/file/d/11wNRHS9PJTpzeNylhQDPzL-eRwg2g7Z_/view?usp=drive_link'
     },
@@ -633,10 +599,8 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'freeCodeCamp',
       name: 'Back End Development and APIs',
       year: '2023',
-      fileType: 'png',
       filename:
         'freeCodeCamp - Back End Development and APIs - 2023-01-08.png',
-      driveId: '1-H-Fjpr-cTfCQg0XZwQ-Jx4VMPSoNtSs',
       driveUrl:
         'https://drive.google.com/file/d/1-H-Fjpr-cTfCQg0XZwQ-Jx4VMPSoNtSs/view?usp=drive_link'
     },
@@ -645,9 +609,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'freeCodeCamp',
       name: 'Foundational C# with Microsoft',
       year: '2025',
-      fileType: 'png',
       filename: 'freeCodeCamp - Foundational C# with Microsoft - 2025-04-29.png',
-      driveId: '1ET9-mawYyyA-w_2tNNMN4z5L_fj3u7WQ',
       driveUrl:
         'https://drive.google.com/file/d/1ET9-mawYyyA-w_2tNNMN4z5L_fj3u7WQ/view?usp=drive_link'
     },
@@ -656,10 +618,8 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'freeCodeCamp',
       name: 'Front End Development Libraries',
       year: '2023',
-      fileType: 'png',
       filename:
         'freeCodeCamp - Front End Development Libraries - 2023-01-06.png',
-      driveId: '1dQr_NmXlPlVNvcqYrpF1tKANosgpVHBi',
       driveUrl:
         'https://drive.google.com/file/d/1dQr_NmXlPlVNvcqYrpF1tKANosgpVHBi/view?usp=drive_link'
     },
@@ -668,10 +628,8 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'freeCodeCamp',
       name: 'Legacy JavaScript Algorithms and Data Structures',
       year: '2022',
-      fileType: 'png',
       filename:
         'freeCodeCamp - Legacy JavaScript Algorithms and Data Structures - 2022-12-13.png',
-      driveId: '1zH4acIPkYvUx9dFmphNPLRBzctWlGfMF',
       driveUrl:
         'https://drive.google.com/file/d/1zH4acIPkYvUx9dFmphNPLRBzctWlGfMF/view?usp=drive_link'
     },
@@ -680,9 +638,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'freeCodeCamp',
       name: 'Responsive Web Design',
       year: '2022',
-      fileType: 'png',
       filename: 'freeCodeCamp - Responsive Web Design - 2022-09-27.png',
-      driveId: '1uX6GZbHcTLit2nli7IgJjrxDZcrl9lK7',
       driveUrl:
         'https://drive.google.com/file/d/1uX6GZbHcTLit2nli7IgJjrxDZcrl9lK7/view?usp=drive_link'
     },
@@ -691,9 +647,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'MEDUCA',
       name: 'Robotics Tutoring',
       year: '2023',
-      fileType: 'jpg',
       filename: 'MEDUCA - Tutorías de Robótica - 2023-07-27.jpg',
-      driveId: '1zBKFRy1o40lX36S8Z-wuBJd4h1ryJqw_',
       driveUrl:
         'https://drive.google.com/file/d/1zBKFRy1o40lX36S8Z-wuBJd4h1ryJqw_/view?usp=drive_link'
     },
@@ -702,9 +656,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'NASA Space Apps',
       name: 'Space Apps Challenge 2024',
       year: '2024',
-      fileType: 'pdf',
       filename: 'NASA Space Apps Challenge 2024.pdf',
-      driveId: '1IXgIlji4IaUW87PWobubqPQ40SV0vHTt',
       driveUrl:
         'https://drive.google.com/file/d/1IXgIlji4IaUW87PWobubqPQ40SV0vHTt/view?usp=drive_link'
     },
@@ -713,9 +665,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'NASA Space Apps',
       name: 'Space Apps Challenge 2025',
       year: '2025',
-      fileType: 'pdf',
       filename: 'NASA Space Apps Challenge 2025.pdf',
-      driveId: '12lzaqbbwjihh7EJi-DDfrD86s1ztrn4h',
       driveUrl:
         'https://drive.google.com/file/d/12lzaqbbwjihh7EJi-DDfrD86s1ztrn4h/view?usp=drive_link'
     },
@@ -724,9 +674,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'Platzi',
       name: 'English Placement Test (B1)',
       year: '',
-      fileType: 'png',
       filename: 'Platzi - English Placement Test B1.png',
-      driveId: '1u7lP1rJ8l1S3POCt0k13R3-RzaS-uc6M',
       driveUrl:
         'https://drive.google.com/file/d/1u7lP1rJ8l1S3POCt0k13R3-RzaS-uc6M/view?usp=drive_link'
     }
