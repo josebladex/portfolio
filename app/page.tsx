@@ -2,6 +2,7 @@
 
 import Approach from '@/components/Approach';
 import { CardStack } from '@/components/card-tech';
+import Certificates from '@/components/Certificates';
 import Hero from '@/components/hero/Hero';
 import LanguageToggleButton from '@/components/LanguageToggleButton';
 import RecentProjects from '@/components/RecentProjects';
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <CardStack />
       <RecentProjects />
+      <Certificates />
       <Approach />
       <div className="fixed top-4 left-4 z-[100000]">
         <LanguageToggleButton />
