@@ -1,0 +1,14 @@
+packages:
+  - "."
+
+allowBuilds:
+  '@parcel/watcher': true
+  '@tsparticles/engine': true
+  sharp: true
+  unrs-resolver: true
+
+# CVE-2026-45623 fix: force every postcss instance (including next's transitive) to >= 8.5.18.
+# CVE-2026-33327/33328/35590/35591 fix: next 16.2.12 pins sharp to a vulnerable 0.34.x.
+overrides:
+  postcss: "^8.5.18"
+  sharp: "^0.35.3"

@@ -35,15 +35,13 @@ cd portfolio
 ### 2. Instalar dependencias
 
 ```bash
-npm install
-# o
-yarn install
+pnpm install
 ```
 
 ### 3. Ejecutar el servidor de desarrollo
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el proyecto.
@@ -57,7 +55,7 @@ Este proyecto está preparado para desplegarse en GitHub Pages como project site
 Para generar el sitio estático con el prefijo `/portfolio`:
 
 ```bash
-npm run build:github
+pnpm build:github
 ```
 
 El resultado se genera en `out/` e incluye `out/.nojekyll` para que GitHub Pages sirva correctamente los assets de Next.js en `_next/`.
