@@ -236,6 +236,22 @@ export const projects: Record<LanguageCode, ProjectItem[]> = {
       ],
       link: 'https://www.adminprochile.com/',
       year: 'Noviembre 2025 - Enero 2026',
+    },
+    {
+      id: 16,
+      title: 'Taukén Dynamics - Stack de Infraestructura y Marketing',
+      des: 'Plataforma en producción con landing (Astro), workflows automatizados (n8n), PostgreSQL y analítica (Umami), desplegada en Oracle Cloud con Dokploy y Traefik. Incluye 5 workflows de campañas B2B y panel admin con autenticación.',
+      img1: publicAsset('/projects/30.webp'),
+      img2: publicAsset('/projects/31.webp'),
+      iconLists: [
+        publicAsset('/bg/postgresql.svg'),
+        publicAsset('/docker-svgrepo-com.svg'),
+        publicAsset('/ts.svg'),
+        publicAsset('/re.svg')
+      ],
+      link: 'https://taukendynamics.com/',
+      year: 'Julio 2026 - Producción',
+      meta: ['En vivo', 'Oracle Cloud · Dokploy']
     }
   ],
   [LANGUAGE_CODES.EN]: [
@@ -444,6 +460,22 @@ export const projects: Record<LanguageCode, ProjectItem[]> = {
       ],
       link: 'https://www.adminprochile.com/',
       year: 'November 2025 - January 2026',
+    },
+    {
+      id: 16,
+      title: 'Taukén Dynamics - Infrastructure & Marketing Stack',
+      des: 'Production platform with Astro landing, n8n automated workflows, PostgreSQL, and Umami analytics, deployed on Oracle Cloud via Dokploy and Traefik. Includes 5 B2B campaign workflows and a basic-auth admin panel.',
+      img1: publicAsset('/projects/30.webp'),
+      img2: publicAsset('/projects/31.webp'),
+      iconLists: [
+        publicAsset('/bg/postgresql.svg'),
+        publicAsset('/docker-svgrepo-com.svg'),
+        publicAsset('/ts.svg'),
+        publicAsset('/re.svg')
+      ],
+      link: 'https://taukendynamics.com/',
+      year: 'July 2026 - Production',
+      meta: ['Live', 'Oracle Cloud · Dokploy']
     }
   ]
 };
