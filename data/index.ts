@@ -240,7 +240,7 @@ export const projects: Record<LanguageCode, ProjectItem[]> = {
     {
       id: 16,
       title: 'Taukén Dynamics - Stack de Infraestructura y Marketing',
-      des: 'Stack 4-servicios en producción: Astro + n8n + PostgreSQL + Umami.',
+      des: 'Plataforma de marketing B2B con workflows automatizados.',
       img1: publicAsset('/projects/30.webp'),
       img2: publicAsset('/projects/31.webp'),
       iconLists: [
@@ -464,7 +464,7 @@ export const projects: Record<LanguageCode, ProjectItem[]> = {
     {
       id: 16,
       title: 'Taukén Dynamics - Infrastructure & Marketing Stack',
-      des: '4-service production stack: Astro + n8n + PostgreSQL + Umami.',
+      des: 'B2B marketing platform with automated workflows.',
       img1: publicAsset('/projects/30.webp'),
       img2: publicAsset('/projects/31.webp'),
       iconLists: [
