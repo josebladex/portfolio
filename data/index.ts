@@ -240,7 +240,7 @@ export const projects: Record<LanguageCode, ProjectItem[]> = {
     {
       id: 16,
       title: 'Taukén Dynamics - Stack de Infraestructura y Marketing',
-      des: 'Plataforma en producción con landing (Astro), workflows automatizados (n8n), PostgreSQL y analítica (Umami), desplegada en Oracle Cloud con Dokploy y Traefik. Incluye 5 workflows de campañas B2B y panel admin con autenticación.',
+      des: 'Stack 4-servicios en producción: Astro + n8n + PostgreSQL + Umami.',
       img1: publicAsset('/projects/30.webp'),
       img2: publicAsset('/projects/31.webp'),
       iconLists: [
@@ -464,7 +464,7 @@ export const projects: Record<LanguageCode, ProjectItem[]> = {
     {
       id: 16,
       title: 'Taukén Dynamics - Infrastructure & Marketing Stack',
-      des: 'Production platform with Astro landing, n8n automated workflows, PostgreSQL, and Umami analytics, deployed on Oracle Cloud via Dokploy and Traefik. Includes 5 B2B campaign workflows and a basic-auth admin panel.',
+      des: '4-service production stack: Astro + n8n + PostgreSQL + Umami.',
       img1: publicAsset('/projects/30.webp'),
       img2: publicAsset('/projects/31.webp'),
       iconLists: [
