@@ -235,7 +235,7 @@ export const projects: Record<LanguageCode, ProjectItem[]> = {
         publicAsset('/docker-svgrepo-com.svg')
       ],
       link: 'https://www.adminprochile.com/',
-      year: 'Noviembre 2025 - Enero 2026',
+      year: 'Noviembre 2025 - Enero 2026'
     },
     {
       id: 16,
@@ -459,7 +459,7 @@ export const projects: Record<LanguageCode, ProjectItem[]> = {
         publicAsset('/docker-svgrepo-com.svg')
       ],
       link: 'https://www.adminprochile.com/',
-      year: 'November 2025 - January 2026',
+      year: 'November 2025 - January 2026'
     },
     {
       id: 16,
@@ -516,8 +516,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'freeCodeCamp',
       name: 'Back End Development and APIs',
       year: '2023',
-      filename:
-        'freeCodeCamp - Back End Development and APIs - 2023-01-08.png',
+      filename: 'freeCodeCamp - Back End Development and APIs - 2023-01-08.png',
       driveUrl:
         'https://drive.google.com/file/d/1-H-Fjpr-cTfCQg0XZwQ-Jx4VMPSoNtSs/view?usp=drive_link'
     },
@@ -526,7 +525,8 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'freeCodeCamp',
       name: 'Foundational C# with Microsoft',
       year: '2025',
-      filename: 'freeCodeCamp - Foundational C# with Microsoft - 2025-04-29.png',
+      filename:
+        'freeCodeCamp - Foundational C# with Microsoft - 2025-04-29.png',
       driveUrl:
         'https://drive.google.com/file/d/1ET9-mawYyyA-w_2tNNMN4z5L_fj3u7WQ/view?usp=drive_link'
     },
@@ -640,8 +640,7 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'freeCodeCamp',
       name: 'Back End Development and APIs',
       year: '2023',
-      filename:
-        'freeCodeCamp - Back End Development and APIs - 2023-01-08.png',
+      filename: 'freeCodeCamp - Back End Development and APIs - 2023-01-08.png',
       driveUrl:
         'https://drive.google.com/file/d/1-H-Fjpr-cTfCQg0XZwQ-Jx4VMPSoNtSs/view?usp=drive_link'
     },
@@ -650,7 +649,8 @@ export const certificates: Record<LanguageCode, CertificateItem[]> = {
       issuer: 'freeCodeCamp',
       name: 'Foundational C# with Microsoft',
       year: '2025',
-      filename: 'freeCodeCamp - Foundational C# with Microsoft - 2025-04-29.png',
+      filename:
+        'freeCodeCamp - Foundational C# with Microsoft - 2025-04-29.png',
       driveUrl:
         'https://drive.google.com/file/d/1ET9-mawYyyA-w_2tNNMN4z5L_fj3u7WQ/view?usp=drive_link'
     },
