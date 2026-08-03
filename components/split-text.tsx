@@ -1,59 +1,53 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
 
-import { animate, stagger } from 'motion';
-import { splitText } from 'motion-plus';
 import { useEffect, useRef } from 'react';
-import { motion, useMotionValue } from 'motion/react';
 
 interface SplitTextProps {
-  text: string; // Texto que se mostrará en el SplitText
+  text: string;
 }
 
 export default function SplitText({ text }: SplitTextProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const count = useMotionValue(0); // Valor animado
+  const words = text.split(' ');
 
   useEffect(() => {
     document.fonts.ready.then(() => {
-      if (!containerRef.current) return;
-
-      // Haz visible el contenedor una vez que las fuentes estén cargadas
-      containerRef.current.style.visibility = 'visible';
-
-      // Divide el texto en palabras
-      const { words } = splitText(containerRef.current.querySelector('h1')!);
-
-      // Anima las palabras en el h1
-      animate(
-        words,
-        { opacity: [0, 1], y: [10, 0] },
-        {
-          type: 'spring',
-          duration: 2,
-          bounce: 0,
-          delay: stagger(0.05)
-        }
-      );
+      if (containerRef.current) {
+        containerRef.current.style.visibility = 'visible';
+      }
     });
-
-    // Anima el porcentaje de 0 a 100
-    const controls = animate(count, 100, { duration: 5 });
-
-    return () => {
-      controls.stop(); // Detén la animación al desmontar el componente
-    };
   }, []);
 
   return (
     <div
-      className="flex justify-start items-start w-full max-w-lg text-left visibility-hidden"
       ref={containerRef}
+      className="flex justify-start items-start w-full max-w-lg text-left"
+      style={{ visibility: 'hidden' }}
     >
       <h1 className="text-base font-bold leading-tight">
-        {text}
-        <motion.span className="ml-2 text-green-400 text-sm"></motion.span>
+        {words.map((w, i) => (
+          <span
+            key={`${w}-${i}`}
+            className="split-word"
+            style={{ animationDelay: `${i * 50}ms` }}
+          >
+            {w}
+            {i < words.length - 1 ? ' ' : ''}
+          </span>
+        ))}
+        <span className="ml-2 text-green-400 text-sm" />
       </h1>
+      <style>{`
+        .split-word {
+          display: inline-block;
+          opacity: 0;
+          transform: translateY(10px);
+          animation: split-fade-up 0.4s ease-out forwards;
+        }
+        @keyframes split-fade-up {
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
     </div>
   );
 }
