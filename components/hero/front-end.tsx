@@ -1,8 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Geo } from 'next/font/google';
-import localFont from 'next/font/local';
+import { Geo, JetBrains_Mono } from 'next/font/google';
 import MagicButton from '@/components/MagicButton';
 import { FaFolderOpen } from 'react-icons/fa'; // Importa íconos de react-icons
 import { useLanguageStore } from '@/store/useLanguageStore'; // Importa el hook de Zustand
@@ -15,8 +14,9 @@ const geo = Geo({
   style: ['normal', 'italic']
 });
 
-const displayFont = localFont({
-  src: '../../public/fonts/3270.ttf',
+const displayFont = JetBrains_Mono({
+  weight: '700',
+  subsets: ['latin'],
   display: 'swap'
 });
 
