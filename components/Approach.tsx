@@ -3,7 +3,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { getYear } from 'date-fns';
 import { useLanguageStore } from '@/store/useLanguageStore';
 import { CanvasRevealEffect } from './CanvasRevealEffect';
 import { Geo } from 'next/font/google';
@@ -15,7 +14,7 @@ export const geo = Geo({
 
 const Approach = () => {
   const { language } = useLanguageStore();
-  const currentYear = getYear(new Date());
+  const currentYear = new Date().getFullYear();
 
   return (
     <section className="w-full pt-20">
