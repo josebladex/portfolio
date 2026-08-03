@@ -1,10 +1,9 @@
 'use client';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from 'react';
+import React, { useRef } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useLanguageStore } from '@/store/useLanguageStore';
-import { CanvasRevealEffect } from './CanvasRevealEffect';
 import { Geo } from 'next/font/google';
 
 export const geo = Geo({
@@ -46,10 +45,7 @@ const Approach = () => {
                 : 'We will collaborate to define your website’s goals, target audience, and key functionalities. We will discuss the site’s structure, navigation, and content requirements.'
           }
         >
-          <CanvasRevealEffect
-            animationSpeed={5.1}
-            containerClassName="bg-emerald-900 rounded-3xl overflow-hidden"
-          />
+          <GlowOverlay palette="emerald" />
         </Tarjeta>
         <Tarjeta
           titulo={
@@ -68,15 +64,7 @@ const Approach = () => {
                 : 'Once we agree on the plan, I put on my playlist and dive into the code. From initial sketches to the final code, I’ll keep you informed at every step of the process.'
           }
         >
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-pink-900 rounded-3xl overflow-hidden"
-            colors={[
-              [255, 166, 158],
-              [221, 255, 247]
-            ]}
-            dotSize={2}
-          />
+          <GlowOverlay palette="pink" />
         </Tarjeta>
         <Tarjeta
           titulo={
@@ -95,11 +83,7 @@ const Approach = () => {
                 : 'This is where the magic happens! Based on the approved design, I will translate everything into functional code, building your website from scratch.'
           }
         >
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-sky-600 rounded-3xl overflow-hidden"
-            colors={[[125, 211, 252]]}
-          />
+          <GlowOverlay palette="sky" />
         </Tarjeta>
       </div>
       <div className="w-full h-full text-center flex items-center justify-center">
@@ -118,6 +102,38 @@ const Approach = () => {
 };
 
 export default Approach;
+
+function GlowOverlay({ palette }: { palette: 'emerald' | 'pink' | 'sky' }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    if (ref.current) {
+      ref.current.style.setProperty('--x', `${e.clientX - r.left}px`);
+      ref.current.style.setProperty('--y', `${e.clientY - r.top}px`);
+    }
+  };
+  const bgClass =
+    palette === 'emerald'
+      ? 'bg-emerald-900'
+      : palette === 'pink'
+        ? 'bg-pink-900'
+        : 'bg-sky-600';
+  return (
+    <div
+      onMouseMove={handleMove}
+      className={`absolute inset-0 overflow-hidden rounded-3xl ${bgClass}`}
+    >
+      <div
+        ref={ref}
+        className="absolute inset-0 opacity-0 group-hover/canvas-card:opacity-100 transition-opacity duration-300"
+        style={{
+          background:
+            'radial-gradient(220px circle at var(--x, 50%) var(--y, 50%), rgba(255,255,255,0.20), transparent 60%)'
+        }}
+      />
+    </div>
+  );
+}
 
 const Tarjeta = ({
   titulo,
@@ -162,14 +178,14 @@ const Tarjeta = ({
 
       <div className="relative z-20 px-10">
         <div
-          className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
+          className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]
         group-hover/canvas-card:opacity-0 transition duration-200 min-w-40 mx-auto flex items-center justify-center"
         >
           {icono}
         </div>
         <h2
           className="dark:text-white text-center text-3xl opacity-0 group-hover/canvas-card:opacity-100
-         relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white 
+         relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white
          group-hover/canvas-card:-translate-y-2 transition duration-200"
         >
           {titulo}
@@ -196,7 +212,7 @@ const AceternityIcon = ({ orden }: { orden: string }) => {
          bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
         />
         <span
-          className="inline-flex h-full w-full cursor-pointer items-center 
+          className="inline-flex h-full w-full cursor-pointer items-center
         justify-center rounded-full bg-slate-950 px-5 py-2 text-purple backdrop-blur-3xl font-bold text-2xl"
         >
           {orden}
