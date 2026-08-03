@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+html {
+  scroll-padding-top: 6rem;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

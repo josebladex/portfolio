@@ -1,7 +1,7 @@
 'use client';
 
+import About from '@/components/About';
 import Approach from '@/components/Approach';
-import { CardStack } from '@/components/card-tech';
 import Certificates from '@/components/Certificates';
 import Hero from '@/components/hero/Hero';
 import LanguageToggleButton from '@/components/LanguageToggleButton';
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <LandingWrapper>
       <Hero />
-      <CardStack />
+      <About />
       <RecentProjects />
       <Certificates />
       <Approach />
