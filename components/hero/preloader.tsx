@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import SplitText from '@/components/split-text';
 import ProgressText from '@/components/progress-text';
 import Browser from '@/components/hero/front-end';

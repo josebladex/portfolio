@@ -2,7 +2,7 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import { getYear } from 'date-fns';
 import { useLanguageStore } from '@/store/useLanguageStore';
 import { CanvasRevealEffect } from './CanvasRevealEffect';

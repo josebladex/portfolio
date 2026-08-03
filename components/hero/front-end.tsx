@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Geo } from 'next/font/google';
 import localFont from 'next/font/local';
 import MagicButton from '@/components/MagicButton';

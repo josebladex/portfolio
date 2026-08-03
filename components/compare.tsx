@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 import { cn } from '@/lib/utils';
 import { IconDotsVertical } from '@tabler/icons-react';
 import { SparklesCore } from './sparkles';

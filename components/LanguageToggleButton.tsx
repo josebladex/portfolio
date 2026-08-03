@@ -8,7 +8,7 @@ import {
   motion,
   useMotionValueEvent,
   useScroll
-} from 'framer-motion';
+} from 'motion/react';
 import { useState } from 'react';
 import { ButtonsCard } from './tailwindcss-buttons';
 const LanguageToggleButton = () => {
