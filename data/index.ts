@@ -1,11 +1,11 @@
 import { publicAsset } from '@/lib/public-asset';
 
-const LANGUAGE_CODES = {
+export const LANGUAGE_CODES = {
   ES: 'es',
   EN: 'en'
 } as const;
 
-type LanguageCode = (typeof LANGUAGE_CODES)[keyof typeof LANGUAGE_CODES];
+export type LanguageCode = (typeof LANGUAGE_CODES)[keyof typeof LANGUAGE_CODES];
 
 interface ProjectItem {
   id: number;
