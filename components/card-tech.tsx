@@ -1,37 +1,5 @@
 'use client';
 import { cn } from '@/lib/utils';
-import { useLanguageStore } from '@/store/useLanguageStore';
-import { EvervaultCard } from './evervault';
-
-export function CardStack() {
-  const { language } = useLanguageStore();
-
-  return (
-    <Card>
-      <div className="w-full">
-        <EvervaultCard
-          text={
-            language === 'es'
-              ? 'Mi Stack Tecnológico en Evolución'
-              : language === 'en'
-                ? 'My Evolving Tech Stack'
-                : 'My Evolving Tech Stack' // Valor por defecto si el idioma no está definido
-          }
-        />
-      </div>
-
-      <CardDescription>
-        {
-          language === 'es'
-            ? 'Licenciado de Ingeniería en Informática y Desarrollador Full Stack con más de 7 años de experiencia liderando proyectos web, IA aplicada y sistemas embebidos. Especialista en desarrollo de software con arquitecturas modernas, tecnologías cloud-native y enfoque integral en frontend, backend, automatización e inteligencia artificial. Enfocado en rendimiento, escalabilidad y experiencia de usuario.'
-            : language === 'en'
-              ? 'Bachelor’s Degree in Computer Engineering and Full Stack Developer with more than 7 years of experience leading web projects, applied AI solutions, and embedded systems. Specialized in software development using modern architectures, cloud-native technologies, and a comprehensive approach covering frontend, backend, automation, and artificial intelligence. Focused on performance, scalability, and user experience.'
-              : 'Bachelor’s Degree in Computer Engineering and Full Stack Developer with more than 7 years of experience leading web projects, applied AI solutions, and embedded systems. Specialized in software development using modern architectures, cloud-native technologies, and a comprehensive approach covering frontend, backend, automation, and artificial intelligence. Focused on performance, scalability, and user experience.' // Valor por defecto si el idioma no está definido
-        }
-      </CardDescription>
-    </Card>
-  );
-}
 
 export const Card = ({
   className,
