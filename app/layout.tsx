@@ -8,6 +8,12 @@ import { HtmlLangSync } from '@/components/HtmlLangSync';
 
 const SITE_URL = 'https://josebladex.github.io/portfolio';
 
+// Umami analytics — instancia compartida en umami.taukendynamics.com
+// (stack TaukenDynamics). El website ID es público por diseño: va en el
+// script del navegador para asociar las visitas a este sitio.
+const UMAMI_SCRIPT_URL = 'https://umami.taukendynamics.com/script.js';
+const UMAMI_WEBSITE_ID = '144b27bb-cc5b-4686-a15a-571cc4cf5868';
+
 // Importa las fuentes desde next/font/google
 const geo = Geo({
   weight: '400',
@@ -94,6 +100,11 @@ export default function RootLayout({
       >
         <JsonLd sameAs={sameAs} knowsAbout={knowsAbout} />
         <HtmlLangSync />
+        <script
+          src={UMAMI_SCRIPT_URL}
+          async
+          data-website-id={UMAMI_WEBSITE_ID}
+        />
         <Dock />
 
         {children}
