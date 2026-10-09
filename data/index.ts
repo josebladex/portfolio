@@ -139,7 +139,7 @@ export const projects: Record<LanguageCode, ProjectItem[]> = {
         publicAsset('/bg/python-5.svg')
       ],
       link: 'https://logisticamrms.com/',
-      year: 'Dic/2025 - Feb/2025'
+      year: 'Agosto 2024 · 8 meses'
     },
     {
       id: 9,
@@ -235,7 +235,7 @@ export const projects: Record<LanguageCode, ProjectItem[]> = {
         publicAsset('/docker-svgrepo-com.svg')
       ],
       link: 'https://www.adminprochile.com/',
-      year: 'Noviembre 2025 - Enero 2026'
+      year: 'Abril 2025 · 10 meses'
     },
     {
       id: 16,
@@ -250,7 +250,7 @@ export const projects: Record<LanguageCode, ProjectItem[]> = {
         publicAsset('/re.svg')
       ],
       link: 'https://taukendynamics.com/',
-      year: 'Julio 2026 - Producción',
+      year: 'Julio 2026 · Actualidad',
       meta: ['En vivo', 'Oracle Cloud · Dokploy']
     }
   ],
@@ -363,7 +363,7 @@ export const projects: Record<LanguageCode, ProjectItem[]> = {
         publicAsset('/bg/python-5.svg')
       ],
       link: 'https://logisticamrms.com/',
-      year: 'Dec/2025 - Feb/2025'
+      year: 'August 2024 · 8 months'
     },
     {
       id: 9,
@@ -459,7 +459,7 @@ export const projects: Record<LanguageCode, ProjectItem[]> = {
         publicAsset('/docker-svgrepo-com.svg')
       ],
       link: 'https://www.adminprochile.com/',
-      year: 'November 2025 - January 2026'
+      year: 'April 2025 · 10 months'
     },
     {
       id: 16,
@@ -474,7 +474,7 @@ export const projects: Record<LanguageCode, ProjectItem[]> = {
         publicAsset('/re.svg')
       ],
       link: 'https://taukendynamics.com/',
-      year: 'July 2026 - Production',
+      year: 'July 2026 · Ongoing',
       meta: ['Live', 'Oracle Cloud · Dokploy']
     }
   ]
