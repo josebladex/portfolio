@@ -9,6 +9,18 @@ allowBuilds:
 
 # CVE-2026-45623 fix: force every postcss instance (including next's transitive) to >= 8.5.18.
 # CVE-2026-33327/33328/35590/35591 fix: next 16.2.12 pins sharp to a vulnerable 0.34.x.
+# 2026-10-13: Next.js 16.2.12 has multiple CVEs (critical/high/moderate/low), patched in 16.3.8+.
+# sharp 0.35.3 has high-severity libheif CVEs, patched in 0.35.4+.
+# js-yaml 4.3.1 (transitive via eslint) has high-severity DoS, patched in 4.3.2+.
+# brace-expansion 1.1.18/5.0.9 (transitive via minimatch/typescript-estree) has DoS CVEs, patched in 1.1.21+/5.0.12+.
+# source-map-js 1.2.1 (transitive via next/sass/tailwindcss) has DoS, patched in 1.2.2+.
+# braces 3.0.3 (transitive via micromatch) has stack-exhaustion DoS advisory (GHSA-vfj7-8cjw-p6xm) but 3.0.4 doesn't exist yet; monitoring.
 overrides:
   postcss: '^8.5.18'
-  sharp: '^0.35.3'
+  sharp: '>=0.35.4'
+  next: '>=16.3.8'
+  js-yaml: '>=4.3.2'
+  brace-expansion: '>=1.1.21'
+  'brace-expansion@5': '>=5.0.12'
+  minimatch: '>=10.2.6'
+  'source-map-js': '>=1.2.2'
